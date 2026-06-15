@@ -1,0 +1,7 @@
+# Anotações pessoais de estudo (não versionar)
+anotacoes/
+
+# NetBeans / build
+build/
+dist/
+nbproject/private/

@@ -3,11 +3,12 @@ package components;
 import core.Widget;
 import core.DialogDirector;
 
-public class Botão1 implements Widget{
+public class CampoTexto implements Widget{
     private DialogDirector director;
     private String nome;
+    private String texto = "";
 
-    public Botão1(String nome, DialogDirector director){
+    public CampoTexto(String nome, DialogDirector director){
         this.nome = nome;
         this.director = director;
     }
@@ -16,8 +17,12 @@ public class Botão1 implements Widget{
         return nome;
     }
 
-    public void clicar(){
-        changed();
+    public String getTexto(){
+        return texto;
+    }
+
+    public void setTexto(String texto){
+        this.texto = texto;
     }
 
     @Override
