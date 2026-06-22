@@ -2,16 +2,16 @@ package screens;
 
 import core.DialogDirector;
 import core.Widget;
-import components.Botão1;
+import components.Botao1;
 import components.CampoTexto;
 
 public class FontDialogDirector extends DialogDirector{
-    private Botão1 ok;
+    private Botao1 ok;
     private CampoTexto nomeFonte;
 
     @Override
     protected void createWidgets(){
-        ok = new Botão1("OK", this);
+        ok = new Botao1("OK", this);
         nomeFonte = new CampoTexto("nomeFonte", this);
     }
 
@@ -29,7 +29,7 @@ public class FontDialogDirector extends DialogDirector{
         System.out.println("Exibindo o form na tela");
     }
 
-    public Botão1 getOk(){
+    public Botao1 getOk(){
         return ok;
     }
 

@@ -3,11 +3,11 @@ package components;
 import core.Widget;
 import core.DialogDirector;
 
-public class Botão1 implements Widget{
+public class Botao1 implements Widget{
     private DialogDirector director;
     private String nome;
 
-    public Botão1(String nome, DialogDirector director){
+    public Botao1(String nome, DialogDirector director){
         this.nome = nome;
         this.director = director;
     }
