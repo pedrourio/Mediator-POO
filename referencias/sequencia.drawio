@@ -1,58 +1,48 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Sequencia-Mediator" id="lVWO351oqHOsi26u79jJ">
-    <mxGraphModel dx="912" dy="512" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="975" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="ll-botao" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="Botão1 (ok : Widget)" vertex="1">
-          <mxGeometry height="360" width="140" x="80" y="40" as="geometry" />
+        <mxCell id="ll-botao" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="Botao1 (botao1 : Widget)" vertex="1">
+          <mxGeometry height="380" width="160" x="80" y="40" as="geometry" />
         </mxCell>
         <mxCell id="act-botao" parent="ll-botao" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="220" width="10" x="65" y="80" as="geometry" />
+          <mxGeometry height="240" width="10" x="75" y="80" as="geometry" />
         </mxCell>
         <mxCell id="ll-mediator" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="Mediator (FontDialogDirector)" vertex="1">
-          <mxGeometry height="360" width="160" x="340" y="40" as="geometry" />
+          <mxGeometry height="380" width="180" x="360" y="40" as="geometry" />
         </mxCell>
         <mxCell id="act-mediator" parent="ll-mediator" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="140" width="10" x="75" y="120" as="geometry" />
+          <mxGeometry height="160" width="10" x="85" y="120" as="geometry" />
         </mxCell>
-        <mxCell id="msg-aplica" edge="1" parent="ll-mediator" source="act-mediator" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" target="act-mediator" value="aplica a fonte">
+        <mxCell id="ll-botao2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="Botao2 (botao2 : Botao2)" vertex="1">
+          <mxGeometry height="380" width="160" x="660" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act-botao2" parent="ll-botao2" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="50" width="10" x="75" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="msg-changed" edge="1" parent="1" source="act-botao" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=1;exitY=0.02;exitDx=0;exitDy=0;" target="act-botao" value="actionPerformed() / changed()">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="160.5" y="220" />
-              <mxPoint x="160.5" y="238" />
-            </Array>
-            <mxPoint x="75" y="220" as="sourcePoint" />
-            <mxPoint x="80.5" y="238" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ll-campo" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="CampoTexto (nomeFonte)" vertex="1">
-          <mxGeometry height="360" width="160" x="620" y="40" as="geometry" />
-        </mxCell>
-        <mxCell id="act-campo" parent="ll-campo" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="50" width="10" x="75" y="140" as="geometry" />
-        </mxCell>
-        <mxCell id="msg-clicar" edge="1" parent="1" source="act-botao" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=1;exitY=0.02;exitDx=0;exitDy=0;entryX=1;entryY=0.1;entryDx=0;entryDy=0;" target="act-botao" value="clicar() / changed()">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="215" y="124" />
-              <mxPoint x="215" y="142" />
+              <mxPoint x="235" y="124" />
+              <mxPoint x="235" y="140" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="msg-widgetchanged" edge="1" parent="1" source="act-botao" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=1;exitY=0.18;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" target="act-mediator" value="widgetChanged(this)">
+        <mxCell id="msg-handle" edge="1" parent="1" source="act-botao" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=1;exitY=0.18;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" target="act-mediator" value="handleBotao1Change(this)">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="msg-gettexto" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" value="getTexto()">
+        <mxCell id="msg-mudar" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" value="mudarTexto(&quot;Texto Mudado&quot;)">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="425" y="180.0000000000001" as="sourcePoint" />
-            <mxPoint x="695" y="180.0000000000001" as="targetPoint" />
+            <mxPoint x="455" y="196" as="sourcePoint" />
+            <mxPoint x="735" y="196" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="msg-ret-arial" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" value="return &quot;Arial&quot;">
+        <mxCell id="msg-ret-mudar" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" value="return">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="695" y="230.0000000000001" as="sourcePoint" />
-            <mxPoint x="425" y="230.0000000000001" as="targetPoint" />
+            <mxPoint x="735" y="248" as="sourcePoint" />
+            <mxPoint x="455" y="248" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="msg-ret-final" edge="1" parent="1" source="act-mediator" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" target="act-botao" value="return">
