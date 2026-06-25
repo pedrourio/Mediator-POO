@@ -1,19 +1,23 @@
 package components;
 
+import javax.swing.JButton;
 import core.Widget;
 import core.DialogDirector;
 
-public class Botão1 implements Widget{
+public class Botao1 extends JButton implements Widget{
     private DialogDirector director;
+    String nome;
 
-    public Botão1(DialogDirector director){
+    public Botao1(DialogDirector director, String nome){
+        super(nome);
         this.director = director;
     }
 
     @Override
     public void changed(){
         //funcao de trigger do mediador
-        director.widgetChanged(this);
+        
+        director.handleBotao1Change(this);
     }
 
 }
