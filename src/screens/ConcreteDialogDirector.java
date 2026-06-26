@@ -18,16 +18,17 @@ public class ConcreteDialogDirector extends DialogDirector{
         for(Pessoa outra : pessoas) {
             if (outra == remetente) continue;
             Component cOutra = (Component) outra;
-            double dx = cOutra.getX() - c.Rem.getX();
+            double dx = cOutra.getX() - cRem.getX();
             double dy = cOutra.getY() - cRem.getY();
+            double dist = Math.sqrt(dx * dx + dy * dy);
 
-            if(dis < menorDist) {
+            if(dist < menorDist) {
                 menorDist = dist;
                 maisProximo = outra;
             }
         }
         if(maisProximo != null) maisProximo.receberMensagem(msg);
-        pessoa.receberMensagem(msg);
+        remetente.receberMensagem(msg);
     }
 
     @Override
