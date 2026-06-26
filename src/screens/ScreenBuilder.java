@@ -33,8 +33,8 @@ public class ScreenBuilder {
         mediador.addPessoa(pessoa1);
 
         
-        for(ConcretePessoa pessoa : mediador.pessoas){
-
+        for(Pessoa p : mediador.pessoas){
+            ConcretePessoa pessoa = (ConcretePessoa) p;
             pessoa.btn1.addActionListener(new ActionListener(){
                 @Override
                 public void actionPerformed(ActionEvent e){

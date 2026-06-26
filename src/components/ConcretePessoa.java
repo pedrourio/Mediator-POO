@@ -7,9 +7,9 @@ import core.DialogDirector;
 
 public class ConcretePessoa extends JPanel implements Pessoa{
     private DialogDirector director;
-    String nome;
-    JButton btn1 = new JButton("Mandar mensagem para o mais proximo");
-    JButton btn2 = new JButton("Mandar mensagem para todos");
+    public String nome;
+    public JButton btn1 = new JButton("Mandar mensagem para o mais proximo");
+    public JButton btn2 = new JButton("Mandar mensagem para todos");
 
     public ConcretePessoa(DialogDirector director, String nome){
         this.nome = nome;

@@ -28,6 +28,7 @@ public class ConcreteDialogDirector extends DialogDirector{
             }
         }
         if(maisProximo != null) maisProximo.receberMensagem(msg);
+        remetente.receberMensagem(msg);
     }
 
     @Override
