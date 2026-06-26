@@ -79,7 +79,7 @@
           </mxGeometry>
         </mxCell>
 
-        <!-- ConcreteDialogDirector --> DialogDirector (extends) -->
+        <!-- ConcreteDialogDirector extends DialogDirector -->
         <mxCell id="r-ext" edge="1" parent="1" source="c-cdd" target="c-director" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
@@ -100,7 +100,7 @@
           </mxGeometry>
         </mxCell>
 
-        <!-- DialogDirector <>--pessoas--> Pessoa (aggregation) -->
+        <!-- DialogDirector agrega Pessoa via campo pessoas -->
         <mxCell id="r-agg" edge="1" parent="1" source="c-director" target="c-pessoa" style="startArrow=diamond;startFill=0;endArrow=open;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;exitX=0;exitY=0.3;exitDx=0;exitDy=0;" value="  pessoas *">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
