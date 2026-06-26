@@ -14,6 +14,9 @@ public class ConcretePessoa extends JPanel implements Pessoa{
     public ConcretePessoa(DialogDirector director, String nome){
         this.nome = nome;
         this.director = director;
+        setBorder(javax.swing.BorderFactory.createTitledBorder(nome));
+        add(btn1);
+        add(btn2);
     }
 
     @Override
