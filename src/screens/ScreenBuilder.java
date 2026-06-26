@@ -20,8 +20,8 @@ public class ScreenBuilder {
                                                               
         Pessoa pessoa1 = new ConcretePessoa(mediador, "Claudio");
         Pessoa pessoa2 = new ConcretePessoa(mediador, "Guilherme");
-        Pessoa pessoa3 = new ConcretePessoa(mediador, "Juan");
-        Pessoa pessoa4 = new ConcretePessoa(mediador, "VItor");
+        Pessoa pessoa3 = new ConcretePessoa(mediador, "Ruan");
+        Pessoa pessoa4 = new ConcretePessoa(mediador, "Victor");
         Pessoa pessoa5 = new ConcretePessoa(mediador, "Pedro");
         Pessoa pessoa6 = new ConcretePessoa(mediador, "Alexandre");
 
