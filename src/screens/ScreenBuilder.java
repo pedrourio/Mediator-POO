@@ -5,33 +5,53 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import components.*;
+import core.Pessoa;
 
 
 public class ScreenBuilder {
     public static void main(String[] args){
-        FontDialogDirector mediador = new FontDialogDirector(); 
+        ConcreteDialogDirector mediador = new ConcreteDialogDirector(); 
         showDialog(mediador);
     }
 
-    static void showDialog(FontDialogDirector mediador){
-        JFrame frame = new JFrame("Formulario");
+    static void showDialog(ConcreteDialogDirector mediador){
+        JFrame frame = new JFrame("Conversa");
         frame.setLayout(new FlowLayout());
                                                               
-        Botao1 botao1 = new Botao1(mediador, "Mudar fonte");
-        Botao2 botao2 = new Botao2(mediador, "Texto generico");
+        Pessoa pessoa1 = new ConcretePessoa(mediador, "Claudio");
+        Pessoa pessoa2 = new ConcretePessoa(mediador, "Guilherme");
+        Pessoa pessoa3 = new ConcretePessoa(mediador, "Juan");
+        Pessoa pessoa4 = new ConcretePessoa(mediador, "VItor");
+        Pessoa pessoa5 = new ConcretePessoa(mediador, "Pedro");
+        Pessoa pessoa6 = new ConcretePessoa(mediador, "Alexandre");
 
-        mediador.setBotao1(botao1);
-        mediador.setBotao2(botao2);
+        mediador.addPessoa(pessoa6);
+        mediador.addPessoa(pessoa5);
+        mediador.addPessoa(pessoa4);
+        mediador.addPessoa(pessoa3);
+        mediador.addPessoa(pessoa2);
+        mediador.addPessoa(pessoa1);
 
-        botao1.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                botao1.changed();
-            }
-        });
+        
+        for(ConcretePessoa pessoa : mediador.pessoas){
 
-        frame.add(botao1);
-        frame.add(botao2);
+            pessoa.btn1.addActionListener(new ActionListener(){
+                @Override
+                public void actionPerformed(ActionEvent e){
+                    pessoa.falarMaisProximo(pessoa.nome + " está dizendo oi para o mais proximo!" );
+                }
+            });
+
+            pessoa.btn2.addActionListener(new ActionListener(){
+                @Override
+                public void actionPerformed(ActionEvent e){
+                    pessoa.falarGeral(pessoa.nome + " está dizendo oi para todos!");
+                }
+            });
+
+            frame.add(pessoa);
+        }
+
         frame.setSize(600, 400);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);

@@ -1,5 +1,7 @@
 package core;
 
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author pedro
@@ -7,11 +9,16 @@ package core;
  */
 
 public abstract class DialogDirector {
-    
-    /*
-    widgetChanged() -> chamado pelo widget quando realizado uma ação
-    */
-    public abstract void handleBotao1Change(Widget widget);
+    List<Pessoa> pessoas = new ArrayList<>();
+
+    public List<Pessoa> getPessoas(){
+        return this.pessoas;
+    }
+    public abstract void acharProximo(String msg, Pessoa pessoa);
+
+    public abstract void broadcast(String msg);
+
+    public abstract void addPessoa(Pessoa pessoa);
 }
 
 
