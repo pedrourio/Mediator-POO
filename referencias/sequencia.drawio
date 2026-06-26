@@ -1,52 +1,69 @@
 <mxfile host="app.diagrams.net">
-  <diagram name="Sequencia-Mediator" id="lVWO351oqHOsi26u79jJ">
+  <diagram name="Sequencia-Mediator" id="seqDiagMediator01">
     <mxGraphModel dx="975" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="ll-botao" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="Botao1 (botao1 : Widget)" vertex="1">
-          <mxGeometry height="380" width="160" x="80" y="40" as="geometry" />
+
+        <!-- Lifeline: ConcretePessoa (remetente) -->
+        <mxCell id="ll-rem" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="ConcretePessoa (remetente)" vertex="1">
+          <mxGeometry height="450" width="190" x="60" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="act-botao" parent="ll-botao" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="240" width="10" x="75" y="80" as="geometry" />
+        <mxCell id="act-rem" parent="ll-rem" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="300" width="10" x="90" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="ll-mediator" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="Mediator (FontDialogDirector)" vertex="1">
-          <mxGeometry height="380" width="180" x="360" y="40" as="geometry" />
+
+        <!-- Lifeline: ConcreteDialogDirector (mediador) -->
+        <mxCell id="ll-med" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="ConcreteDialogDirector (mediador)" vertex="1">
+          <mxGeometry height="450" width="220" x="360" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="act-mediator" parent="ll-mediator" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="160" width="10" x="85" y="120" as="geometry" />
+        <mxCell id="act-med" parent="ll-med" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="180" width="10" x="105" y="140" as="geometry" />
         </mxCell>
-        <mxCell id="ll-botao2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="Botao2 (botao2 : Botao2)" vertex="1">
-          <mxGeometry height="380" width="160" x="660" y="40" as="geometry" />
+
+        <!-- Lifeline: ConcretePessoa (destinatario) -->
+        <mxCell id="ll-dest" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="ConcretePessoa (destinatário)" vertex="1">
+          <mxGeometry height="450" width="190" x="710" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="act-botao2" parent="ll-botao2" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="50" width="10" x="75" y="158" as="geometry" />
+        <mxCell id="act-dest" parent="ll-dest" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="60" width="10" x="90" y="220" as="geometry" />
         </mxCell>
-        <mxCell id="msg-changed" edge="1" parent="1" source="act-botao" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=1;exitY=0.02;exitDx=0;exitDy=0;" target="act-botao" value="actionPerformed() / changed()">
+
+        <!-- msg1: self-call falarMaisProximo -->
+        <mxCell id="msg1" edge="1" parent="1" source="act-rem" target="act-rem" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=1;exitY=0.02;exitDx=0;exitDy=0;" value="btn1.click → falarMaisProximo(msg)">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="235" y="124" />
-              <mxPoint x="235" y="140" />
+              <mxPoint x="240" y="112" />
+              <mxPoint x="240" y="132" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="msg-handle" edge="1" parent="1" source="act-botao" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=1;exitY=0.18;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" target="act-mediator" value="handleBotao1Change(this)">
+
+        <!-- msg2: acharProximo -->
+        <mxCell id="msg2" edge="1" parent="1" source="act-rem" target="act-med" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=1;exitY=0.18;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" value="acharProximo(msg, this)">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="msg-mudar" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" value="mudarTexto(&quot;Texto Mudado&quot;)">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="455" y="196" as="sourcePoint" />
-            <mxPoint x="735" y="196" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="msg-ret-mudar" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" value="return">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="735" y="248" as="sourcePoint" />
-            <mxPoint x="455" y="248" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="msg-ret-final" edge="1" parent="1" source="act-mediator" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" target="act-botao" value="return">
+
+        <!-- msg3: receberMensagem -->
+        <mxCell id="msg3" edge="1" parent="1" source="act-med" target="act-dest" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" value="receberMensagem(msg)">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- return dest -> med -->
+        <mxCell id="ret1" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" value="return">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="800" y="298" as="sourcePoint" />
+            <mxPoint x="475" y="298" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- return med -> rem -->
+        <mxCell id="ret2" edge="1" parent="1" source="act-med" target="act-rem" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" value="return">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note-broadcast" parent="1" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=2;fontSize=11;" value="[falarGeral] btn2.click → falarGeral(msg) → broadcast(msg) → receberMensagem(msg) para cada Pessoa" vertex="1">
+          <mxGeometry height="30" width="580" x="60" y="8" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
