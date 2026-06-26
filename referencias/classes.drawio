@@ -1,0 +1,122 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Classes-Mediator" id="classDiagMediator01">
+    <mxGraphModel dx="1414" dy="825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c-director" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;fontStyle=3;" value="&lt;&lt;abstract&gt;&gt;&#xa;DialogDirector" vertex="1">
+          <mxGeometry height="96" width="300" x="1100" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="c-director-attrs" parent="c-director" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="300" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c-director-m1" parent="c-director" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=2;" value="+ handleBotao1Change(w : Widget) : void {abstract}" vertex="1">
+          <mxGeometry height="24" width="300" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="c-widget" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;fontStyle=3;" value="&lt;&lt;interface&gt;&gt;&#xa;Widget" vertex="1">
+          <mxGeometry height="72" width="200" x="770" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="c-widget-attrs" parent="c-widget" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c-widget-m1" parent="c-widget" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ changed() : void" vertex="1">
+          <mxGeometry height="24" width="200" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="c-fdd" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;" value="FontDialogDirector" vertex="1">
+          <mxGeometry height="172" width="270" x="1370" y="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="c-fdd-attrs" parent="c-fdd" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- botao1 : Botao1&#xa;- botao2 : Botao2" vertex="1">
+          <mxGeometry height="44" width="270" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="c-fdd-line" parent="c-fdd" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="270" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c-fdd-m" parent="c-fdd" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ setBotao1(btn1 : Botao1) : void&#xa;+ setBotao2(btn2 : Botao2) : void&#xa;+ handleBotao1Change(w : Widget) : void" vertex="1">
+          <mxGeometry height="94" width="270" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="c-botao1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;" value="Botao1" vertex="1">
+          <mxGeometry height="118" width="200" x="580" y="1220" as="geometry" />
+        </mxCell>
+        <mxCell id="c-botao1-attrs" parent="c-botao1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- director : DialogDirector&#xa;- nome : String" vertex="1">
+          <mxGeometry height="44" width="200" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="c-botao1-line" parent="c-botao1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c-botao1-m" parent="c-botao1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ changed() : void" vertex="1">
+          <mxGeometry height="40" width="200" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="c-botao2" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;" value="Botao2" vertex="1">
+          <mxGeometry height="142" width="230" x="860" y="1220" as="geometry" />
+        </mxCell>
+        <mxCell id="c-botao2-attrs" parent="c-botao2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- director : DialogDirector&#xa;- nome : String" vertex="1">
+          <mxGeometry height="44" width="230" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="c-botao2-line" parent="c-botao2" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="230" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c-botao2-m" parent="c-botao2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ changed() : void&#xa;+ mudarTexto(texto : String) : void" vertex="1">
+          <mxGeometry height="64" width="230" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="r-herd" edge="1" parent="1" source="c-fdd" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="c-director" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1505" y="1020" />
+              <mxPoint x="1250" y="1020" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r-real-botao1" edge="1" parent="1" source="c-botao1" style="endArrow=block;endFill=0;endSize=14;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="c-widget" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="1060" />
+              <mxPoint x="870" y="1060" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r-real-botao2" edge="1" parent="1" source="c-botao2" style="endArrow=block;endFill=0;endSize=14;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="c-widget" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1010" y="1060" />
+              <mxPoint x="870" y="1060" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r-assoc-botao1" edge="1" parent="1" source="c-botao1" style="endArrow=open;endFill=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;startArrow=none;fontSize=11;" target="c-director" value="-director">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="750" y="1170" />
+              <mxPoint x="990" y="1170" />
+              <mxPoint x="990" y="800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r-assoc-botao2" edge="1" parent="1" source="c-botao2" style="endArrow=open;endFill=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;startArrow=none;fontSize=11;" target="c-director" value="-director">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1070" y="818" />
+            </Array>
+            <mxPoint x="1400" y="866" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r-assoc-fdd-botao1" edge="1" parent="1" source="c-fdd" style="endArrow=open;endFill=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;startArrow=none;fontSize=11;" target="c-botao1" value="-botao1">
+          <mxGeometry relative="1" x="0.8" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1460" y="1430" />
+              <mxPoint x="720" y="1430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r-assoc-fdd-botao2" edge="1" parent="1" source="c-fdd" style="endArrow=open;endFill=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;startArrow=none;fontSize=11;" target="c-botao2" value="-botao2">
+          <mxGeometry relative="1" x="0.62" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1460" y="1330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
